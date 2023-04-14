@@ -1,0 +1,19 @@
+{
+    "iteration_count": 30,
+    "debug" : false,
+    "load_type": "incremental",
+    "engine_mode": "distinct-user",
+    "output": "stdout",
+    "steps": [
+        {
+            "id": 1,
+            "url": "https://jsonplaceholder.typicode.com/todos/{{_randomInt}}",
+            "method": "GET",
+            "timeout": 3,
+            "sleep": "300-500",
+            "assertion":[
+                "equals(status_code,200)"
+            ]
+        }
+    ]
+}
